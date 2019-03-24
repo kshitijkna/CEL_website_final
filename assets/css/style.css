@@ -191,7 +191,7 @@ html {
 body {
   background: #fff;
   font: 400 12px/1.8 "Open Sans", sans-serif;
-  color: #666;
+  color: #444;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -3052,5 +3052,63 @@ Google map
   .works-grid-4 .work-item,
   .works-grid-5 .work-item {
     width: 100%;
+  }
+}
+
+
+***********************************************
+
+
+
+.wrapper {
+  padding: 5px;
+  max-width: 960px;
+  width: 95%;
+  margin: 20px auto;
+}
+header {
+  padding: 0 15px;
+}
+
+.columns {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+.column {
+  flex: 1;
+  // border: 1px solid gray;
+  margin: 2px;
+  padding: 10px;
+  &:first-child { margin-left: 0; }
+  &:last-child { margin-right: 0; }
+  
+}
+
+footer {
+  padding: 0 15px;
+}
+
+
+@media screen and (max-width: 980px) {
+  .columns .column {
+    margin-bottom: 5px;
+    flex-basis: 40%;
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
+    &:last-child {
+      flex-basis: 100%;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .columns .column {
+    flex-basis: 100%;
+    margin: 0 0 5px 0;
   }
 }

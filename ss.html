@@ -21,16 +21,20 @@
           border-radius: 50%;
       }
 
-      @media (max-width : 991px){
-          #dynamic-footers{
-            width : 90%;
-          }
+      @media (max-width : 600px){
+        .footer-dynamic{
+          width: 90vw;
+          left: 5vw;
+          position: relative;
+        }
       }
 
-      @media (min-width : 992px){
-          #dynamic-footers{
-            width : 70%;
-          }
+      @media (min-width : 601px){
+        .footer-dynamic{
+          width: 70vw;
+          left: 15vw;
+          position : relative;
+        }
       }
     </style>
     
@@ -66,7 +70,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
   </head>
-  <body data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
+  <body id="top-top" data-spy="scroll" data-target=".onpage-navigation" data-offset="60">
     <main>
       <div class="page-loader">
           <div id="cssLoader1" class="main-wrap">
@@ -89,22 +93,19 @@
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#custom-collapse" style="margin-bottom: 30px; margin-top: 25px"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="index.html"><img src="assets/images/cel2.png" style="width:150px; margin-top: -5px"></a>
           </div>
           <div class="collapse navbar-collapse" id="custom-collapse">
-            <ul class="nav navbar-nav navbar-right" style="padding-top: 16px; margin-top: 15px;margin-bottom: 10px; color: #F4CE2F; font-size: 14px;">
+            <ul class="nav navbar-nav navbar-right" style="padding-top: 16px; margin-top: 15px;margin-bottom: 10px; color: #F4CE2F; font-size: 15px;">
               <li style="margin-top: -11px; margin-bottom: 10px"><a  href="index.html" style="padding-right: 0px;">Home</a>
 
               </li>
 <!--               <li class="dropdown"><a  href="ourStory.html" data-toggle="dropdown">Our Story</a></li> -->
               <li style="margin-top: -11px; margin-bottom: 10px"><a href="index.html#about" style="margin-right: -10px">About</a></li>
               <li class="dropdown" style="margin-top: -11px; margin-bottom: 10px"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Projects</a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown"><a href="./conquest.html">Conquest</a>
-                  </li>
-                  <li class="dropdown"><a href="./desert_hack.html">DESERT HACK</a>
-                  </li>
-                  <li class="dropdown"><a href="./sis.html">SiS</a>
-                  </li>
+                <ul class="dropdown-menu" style="font-size: 12px">
+                  <li class="dropdown"><a href="./conquest.html">Conquest</a></li>
+                  <li class="dropdown"><a href="./desert_hack.html">DESERT HACK</a></li>
+                  <li class="dropdown"><a href="./sis.html">SiS</a></li>
                   <li class="dropdown"><a class="dropdown-toggle" href="./ss.html" data-toggle="dropdown">Startup Sphere</a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="font-size: 12px">
                       <li><a href="ss.html#E-summit">E-Summit</a></li>
                       <li><a href="ss.html#Startup_Weekend">Startup Weekend</a></li>
                       <li><a href="ss.html#S3">S3 Sessions</a></li>
@@ -113,7 +114,7 @@
                   </li>
 
                   <li class="dropdown"><a class="dropdown-toggle" href="./red.html" data-toggle="dropdown">RED</a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu" style="font-size: 12px">
                       <li><a href="./red.html#raila">Project Raila</a></li>
                       <li><a href="./red.html#saksham">Project Saksham</a></li>
                       <li><a href="./red.html#clts">CLTS</a></li>
@@ -126,6 +127,24 @@
                   <li class="dropdown"><a href="http://celbits.conquest.org.in/">SS Mag</a></li>
                 </ul>
               </li>
+
+              <li class="dropdown" style="margin-top: -11px; margin-bottom: 10px"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Resources</a>
+                <ul class="dropdown-menu" style="font-size: 12px">
+                  <li class="dropdown"><a href="./resources.html#blogs">Blogs</a></li>
+                  <li class="dropdown"><a href="./resources.html#podcasts">Podcasts</a></li>
+                  <li class="dropdown"><a href="./resources.html#books">Books</a></li>
+                  <li class="dropdown"><a href="./resources.html#funding">Funding</a></li>
+                  <li class="dropdown"><a href="./resources.html#not_working">Tools / Services</a></li>
+                  <li class="dropdown"><a href="./resources.html#marketing">Marketing</a></li>
+                  <li class="dropdown"><a href="./resources.html#legal">Legal</a></li>
+                  <li class="dropdown"><a href="./resources.html#courses">Courses / MOOCs</a></li>
+                  <li class="dropdown"><a href="./resources.html#tech">Tech</a></li>
+                  <li class="dropdown"><a href="./resources.html#youtube">YouTube Channels</a></li>
+                  <li class="dropdown"><a href="./resources.html#designing">Designing</a></li>
+                  <li class="dropdown"><a href="./resources.html#twitter">Twitter Handles</a></li>
+                </ul>
+              </li>
+
               <li style="margin-top: -11px; margin-bottom: 10px"><a class="smoothscroll" href="index.html#contact">Contact Us</a></li>
             </ul>
           </div>
@@ -310,7 +329,7 @@
     
         <hr class="divider-d">
         <footer class="footer bg-dark">
-          <div class="container" id="dynamic-footers">
+          <div class="footer-dynamic">
             <div class="row">
               <div class="col-sm-7 col-seven tab-full left footer-desc" style = "margin-top: 5%">
 
@@ -337,7 +356,7 @@
                         </div>
 
                         <div class="text-center" >
-                          <button class="btn btn-block btn-round btn-d" id="cfsubmit" style="background-color: black; height: 42px" type="submit">Submit</button>
+                          <button class="btn btn-block btn-round btn-d" id="cfsubmit" style="background-color: black;border: 1px solid #f4ce31;color: #f4ce31; height: 40px; font-size: 16px; line-height: 16px" type="submit">Submit</button>
                         </div>
 
                         <label for="mc-email" class="subscribe-message"></label>
@@ -367,8 +386,37 @@
         </footer>
       <div class="scroll-up"><a href="#top-top"><i class="fas fa-arrow-circle-up fa-3x circle-icon"></i></a></div>
     </main>
-      
-      <script src="assets/lib/jquery/dist/jquery.js"></script>
+    
+    <!-- smooth scroll -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+      } // End if
+    });
+    });
+    </script>
+
+    <script src="assets/lib/jquery/dist/jquery.js"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/lib/wow/dist/wow.js"></script>
     <script src="assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js"></script>
